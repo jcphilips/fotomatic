@@ -41,6 +41,8 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  color: #4A4A4A;
+  z-index: 1;
 }
 
 header .content {
@@ -50,6 +52,9 @@ header .content {
 }
 
 header .logo {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  color: inherit;
   flex: 1;
 }
 
@@ -117,13 +122,18 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url('../images/banner-landingpage.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #sign-up-cta {
-  padding: 0 5rem 2.5rem 5rem;
+  padding: 0 5rem 3.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  margin: 170px 0 0 100px;
 }
 
 #sign-up-cta .content {
@@ -211,28 +221,39 @@ header .mobile {
 
 #features-section {
   display: flex;
+  width: 90%;
   justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
 }
 
 .feature {
+  position: relative;
   flex: 1;
   padding: 2rem;
-  margin: 0px 1.25rem;
+  margin: 0px 1.1875rem;
   background-color: white;
+  height: 35.6875rem;
+  overflow: hidden;
+  width: 90%;
 }
 
 .feature .image-container {
-  width: 90%;
   height: 65%;
   margin: 0 auto;
 }
 
+.feature .image-container img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .feature h2 {
   padding-bottom: .5rem;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: bold;
+  line-height: 1.2;
   color: #4a4a4a;
 }
 
@@ -241,6 +262,10 @@ header .mobile {
   line-height: 1.2;
   font-weight: 300;
   color: #4a4a4a;
+}
+
+.feature .content {
+  padding-top: 2.5rem;
 }
 
 @media only screen and (max-width: 890px) {
@@ -294,8 +319,23 @@ header .mobile {
 }
 
 #filters-section .images-container {
-  max-width: 100%;
+  display: flex;
+  width: 98%;
   padding: 0 1%;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#filters-section .image-container {
+  width: 25%;
+  height: auto;
+  overflow: hidden;
+}
+
+#filters-section img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
 }
 
 @media only screen and (max-width: 760px) {
@@ -334,11 +374,11 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -347,8 +387,9 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
+  vertical-align: text-bottom;
 }
 
 @media only screen and (max-width: 760px) {
@@ -356,7 +397,7 @@ header .mobile {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
@@ -372,13 +413,16 @@ header .mobile {
 
 footer {
   background-color: #9b9b9b;
-  padding: 1.5rem 2rem;
+  padding: 1.5625rem 2rem;
 }
 
 footer .content {
-  color: white;
   display: flex;
-  font-size: .75rem;
+}
+
+footer span {
+  color: white;
+  font-size: 0.75rem;
 }
 
 footer .copyright {
